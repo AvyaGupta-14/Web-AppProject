@@ -8,7 +8,7 @@
 </head>
 <body bgcolor="seagreen">
 
-<h1>Welcome ! This is your profile </h1>
+<h1>Welcome ! This is your profile.. </h1>
 
 </body>
 </html>
