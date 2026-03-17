@@ -8,8 +8,9 @@
 </head>
 <body bgcolor="seagreen">
 
-<h1>Welcome ! This is your profile Mr. ${user} </h1>
-
+	<h1>Welcome ! Your username is : Mr. ${username}</h1>
+	<h1>Welcome ! Your department is : Mr. ${department}</h1>
+	<h1>Welcome ! Your address is : Mr. ${address}</h1>
 </body>
 </html>
 
