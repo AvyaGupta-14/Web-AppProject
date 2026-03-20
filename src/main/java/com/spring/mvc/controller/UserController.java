@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.spring.mvc.model.Employee;
+
 //import com.spring.mvc.model.Employee;
 
 @Controller
@@ -42,11 +44,11 @@ public class UserController {
 	
 	
 	
-//	@PostMapping("/createUser")
-//	public String createUser(@ModelAttribute Employee employee)
-//	{
-//		System.out.println(employee);
-//		return "index";
-//	}
+	@PostMapping("/createUser")
+	public String createUser(@ModelAttribute Employee employee)
+	{
+		System.out.println(employee);
+		return "index";
+	}
 
 }
