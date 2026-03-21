@@ -2,6 +2,7 @@ package com.spring.mvc.model;
 
 public class Employee {
 	
+	private int id;
 	private String username,department,address;
 
 	
@@ -11,11 +12,22 @@ public class Employee {
 	}
 
 
-	public Employee(String username, String department, String address) {
+	public Employee(int id,String username, String department, String address) {
 		super();
+		this.id = id;
 		this.username = username;
 		this.department = department;
 		this.address = address;
+	}
+
+	
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 
@@ -51,8 +63,12 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [username=" + username + ", department=" + department + ", address=" + address + "]";
+		return "Employee [id=" + id + ", username=" + username + ", department=" + department + ", address=" + address
+				+ "]";
 	}
+
+
+	
 
 	
 
