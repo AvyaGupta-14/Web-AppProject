@@ -15,6 +15,7 @@
         <th>Name</th>
         <th>Department</th>
         <th>Salary</th>
+        <th>Changes</th>
     </tr>
     <c:forEach var="employee" items="${employees}">
         <tr>
@@ -22,6 +23,11 @@
             <td>${employee.username}</td>
             <td>${employee.department}</td>
             <td>${employee.address}</td>
+            
+            <td>
+                <a href="edit/${employee.id}">Edit</a> |
+                <a href="delete/${employee.id}">Delete</a>
+            </td>
         </tr>
     </c:forEach>
 </table>

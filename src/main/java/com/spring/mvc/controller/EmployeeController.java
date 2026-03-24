@@ -37,13 +37,14 @@ public class EmployeeController {
 	@PostMapping("/createUser")
 	public String createUser(@ModelAttribute Employee emp, Model model) {
 		employeeService.saveEmployee(emp);
+		model.addAttribute("employee", emp);
 		return "success";
 	}
 
 	@GetMapping("/getEmpById/{id}")
 	public String getEmp(@PathVariable(name = "id") int id, Model model) {
-		
-		
+		Employee emp = employeeService.getEmployeeById(id);
+		model.addAttribute("employee", emp);		
 		return "success";
 	}
 
@@ -54,4 +55,24 @@ public class EmployeeController {
 		model.addAttribute("employees", employeeService.getAllEmployees());
 		return "employeeList";
 	}
+	
+	@PostMapping("/updateEmployee")
+	public String updateEmployee(@ModelAttribute Employee emp, Model model) {
+	    employeeService.saveEmployee(emp);
+	    return "redirect:/employees";
+	}
+	
+	@GetMapping("/edit/{id}")
+	public String editForm(@PathVariable("id") int id, Model model) {
+	   Employee emp = employeeService.getEmployeeById(id);
+	   model.addAttribute("employee", emp);
+	    return "updateData"; 
+	}
+	
+	@GetMapping("/delete/{id}")
+	public String deleteEmployees(@PathVariable("id") int id,Model model) {
+		 employeeService.deleteEmployee(id);
+		 return "redirect:/employees";
+	}
+	
 }

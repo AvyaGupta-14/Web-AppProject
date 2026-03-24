@@ -29,8 +29,16 @@ public class EmployeeService {
 		return employeeDao.getAllEmployees();
 	}
 	
+	public Employee getEmployeeById(int id) {
+		return employeeDao.getEmployeeById(id);
+	}
+	
+	
+	public void deleteEmployee(int id) {
+		System.out.println("EmployeeService.daleteEmployee()");
+	    employeeDao.deleteEmployee(id);
+	}
 	
 	
 	
-
 }
